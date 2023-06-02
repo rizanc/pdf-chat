@@ -1,5 +1,5 @@
 import streamlit as st
-#from dotenv import load_dotenv
+from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 import langchain
 langchain.verbose = False
@@ -13,7 +13,7 @@ from htmlTemplates import css, bot_template, user_template
 # from langchain.llms import HuggingFaceHub
 
 def main():
-    #load_dotenv()
+    load_dotenv()
 
     st.set_page_config(page_title='Chat with Multiple PDFs', page_icon=':house:', layout='wide')
     st.write(css, unsafe_allow_html=True)
